@@ -2,7 +2,10 @@
     "name": "profile-app",
     "version": "1.0.0",
     "scripts": {
-        "build": "cd backend && npm install && npm run build && cd ../frontend && npm install && npm run build"
+        "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ..",
+        "build": "cd backend && npm install && npm run build && cd ../frontend && npm install && npm run build",
+        "dev:backend": "cd backend && npm run start:dev",
+        "dev:frontend": "cd frontend && npm run dev"
     },
     "engines": {
         "node": "20.x"
